@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashion World</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">Fashion World</div>
+
+    <ul class="menu">
+      <li><a href="home.html" class="active">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contactus.html">Contact</a></li>
+    </ul>
+
+    <div class="right">
+      <a href="wishlist.html" class="cart-icon"><i class="fa-solid fa-cart-shopping"></i></a>
+      <i class="fa-regular fa-user profile-icon" onclick="openProfile()"></i>
+      <button class="login-btn" onclick="openLogin()">Login</button>
+    </div>
+  </nav>
+
+  <!-- LOGIN MODAL -->
+  <div class="overlay" id="loginModal">
+    <div class="login-box">
+      <span class="close" onclick="closeLogin()">&times;</span>
+
+      <h1>LOGIN</h1>
+      <p class="subtitle">How do I get started lorem ipsum dolor?</p>
+
+      <div class="input-box">
+        <i class="fa-regular fa-user"></i>
+        <input type="text" placeholder="Username">
+      </div>
+
+      <div class="input-box">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" placeholder="Password">
+      </div>
+
+      <button class="login-submit" onclick="window.location.href='home.html'">Login</button>
+
+
+      <div class="divider">or continue with</div>
+
+      <button class="social">
+        <i class="fa-brands fa-google"></i>
+        Continue with Google
+      </button>
+
+
+      <button class="social">
+        <i class="fa-brands fa-apple"></i>
+        Continue with Apple
+      </button>
+    </div>
+  </div>
+
+  <!-- PROFILE LOGIN POPUP -->
+  <div class="profile-overlay" id="profilePopup">
+    <div class="profile-box">
+
+      <span class="profile-close" onclick="closeProfile()">&times;</span>
+
+      <h1>Welcome to</h1>
+      <h2>Luxury Fashion World</h2>
+
+      <p class="profile-sub">Please Enter Your Mobile Number</p>
+
+      <div class="mobile-input">
+        <span class="country-code">📞 +91</span>
+        <input type="text" placeholder="Mobile number">
+      </div>
+
+      <a href="#" class="use-email">Use E-Mail</a>
+
+      <p class="captcha-text">
+        This site is protected by reCAPTCHA and the Google
+        <a href="#">Privacy Policy</a> and
+        <a href="#">Terms of Service</a> apply.
+        On Clicking Continue, I agree to
+        <a href="#">Terms of Service</a> &
+        <a href="#">Privacy Policy</a>
+      </p>
+
+      <button class="continue-btn">Continue</button>
+
+    </div>
+  </div>
+
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+
+    <!-- LEFT CONTENT -->
+    <div class="hero-left">
+      <h1>
+        Elevate Your Style This<br>
+        Season
+      </h1>
+
+      <p>
+        Discover our new collection of premium fashion pieces
+        designed for the modern connoisseur.
+      </p>
+
+      <button class="hero-btn" onclick="window.location.href='categories.html'">Go To Shop</button>
+    </div>
+
+    <!-- RIGHT IMAGES -->
+    <div class="hero-right">
+      <img src="images/Frame 2656.jpg" class="img img1">
+      <img src="images/Frame 2657.jpg" class="img img2">
+      <img src="images/Frame 2658.jpg" class="img img3">
+      <img src="images/Frame 2659.jpg" class="img img4">
+    </div>
+
+  </section>
+
+
+
+  <!-- SHOP BY CATEGORY -->
+  <section class="category-section">
+
+    <h2>Shop By Category</h2>
+    <p class="sub-text">Curated collections for every occasion</p>
+
+    <div class="slider-wrapper">
+      <button class="nav-btn left" onclick="slideLeft()">&#10094;</button>
+
+      <div class="category-slider" id="slider">
+        <div class="category-card">
+          <img src="images/Default.jpg">
+          <div class="overlay">Modern</div>
+        </div>
+
+        <div class="category-card">
+          <img src="images/casul.jpg">
+          <div class="overlay">Casual</div>
+        </div>
+
+        <div class="category-card">
+          <img src="images/traditinal.jpg">
+          <div class="overlay">Traditional</div>
+        </div>
+
+        <div class="category-card">
+          <img src="images/formal.jpg">
+          <div class="overlay">Accessories</div>
+        </div>
+      </div>
+
+      <button class="nav-btn right" onclick="slideRight()">&#10095;</button>
+    </div>
+
+  </section>
+
+  <!-- OFFER BANNER -->
+  <section class="offer-banner">
+    <img src="images/Rectangle 178.jpg">
+    <h1>50% OFF</h1>
+  </section>
+
+  <!-- PRODUCT CARDS -->
+  <section class="product-section">
+
+    <div class="product-grid">
+
+      <div class="product-card">
+        <img src="images/Frame 2806.jpg">
+        <div class="product-info">
+          <h3>T- Shirt</h3>
+          <p>Cotton Cloths for Summer</p>
+          <div class="rating">4 ⭐</div>
+          <span class="price">$250</span>
+          <button onclick="window.location.href='checkout.html'">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="images/Frame 2664.jpg">
+        <div class="product-info">
+          <h3>Scout</h3>
+          <p>Cotton Cloths for Summer</p>
+          <div class="rating">4 ⭐</div>
+          <span class="price">$250</span>
+          <button onclick="window.location.href='checkout.html'">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="images/Frame 2665.jpg">
+        <div class="product-info">
+          <h3>Gown</h3>
+          <p>Cotton Cloths for Summer</p>
+          <div class="rating">4 ⭐</div>
+          <span class="price">$250</span>
+          <button onclick="window.location.href='checkout.html'">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="images/Frame 2807.jpg">
+        <div class="product-info">
+          <h3>Top</h3>
+          <p>Cotton Cloths for Summer</p>
+          <div class="rating">4 ⭐</div>
+          <span class="price">$250</span>
+          <button onclick="window.location.href='checkout.html'">Buy Now</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <h2>Subscribe to Our Newsletter</h2>
+    <p>Be the first to know about new collections and exclusive offers</p>
+
+    <div class="newsletter-box">
+      <input type="email" placeholder="Enter your email">
+      <button>Subscribe</button>
+    </div>
+  </section>
+
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- BRAND -->
+      <div class="footer-col">
+        <h2 class="brand">LUXE.</h2>
+        <p class="desc">
+          Premium fashion for the modern connoisseur.
+          Elevate your style with our curated collections.
+        </p>
+
+        <div class="socials">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-x-twitter"></i>
+          <i class="fa-brands fa-facebook"></i>
+        </div>
+      </div>
+
+      <!-- SHOP -->
+      <div class="footer-col">
+        <h3>Shop</h3>
+        <ul>
+          <li>Women</li>
+          <li>Men</li>
+          <li>Accessories</li>
+          <li>New Arrivals</li>
+          <li>Sale</li>
+        </ul>
+      </div>
+
+      <!-- HELP -->
+      <div class="footer-col">
+        <h3>Help</h3>
+        <ul>
+          <li>Customer Service</li>
+          <li>My Account</li>
+          <li>Find a Store</li>
+          <li>Shipping & Returns</li>
+          <li>FAQ</li>
+        </ul>
+      </div>
+
+      <!-- ABOUT -->
+      <div class="footer-col">
+        <h3>About</h3>
+        <ul>
+          <li>Our Story</li>
+          <li>Careers</li>
+          <li>Corporate Responsibility</li>
+          <li>Press</li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/script.js"></script>
+</body>
+
+</html>
